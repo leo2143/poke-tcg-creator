@@ -1,17 +1,18 @@
 <script>
-import Home from '../components/Home.vue'
+import Root from '../components/Root.vue'
 
 export default {
   name: "root",
   components: {
-    Home
+    Root
   },
 }
+
 </script>
 
 <template>
   <main>
-    <Home />
+    <Root />
 
   </main>
 </template>
