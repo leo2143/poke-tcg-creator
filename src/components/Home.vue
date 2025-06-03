@@ -38,7 +38,7 @@ export default {
       <img class="mt-32" src="../assets/images/pikachu-card-movile_0.png" alt="pikachu con una carta">
       <div class="mt-32">
         <RouterLink to="/about">Mas info</RouterLink>
-        <img src="../assets/images/arrow_right.svg" alt="flecha">
+        <img src="../assets/images/arrow_right_yellow.svg" alt="flecha">
       </div>
     </div>
     <div class="wave-bottom"></div>

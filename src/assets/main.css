@@ -62,7 +62,9 @@ h1, h2, h3, h4, h5, h6 {
 a{
   text-decoration: none;
   color: none;
-  font-family:var(--font-base) ;
+  font-family:var(--font-base);
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 .text-bg-white{
     color: #002D6C  !important;
@@ -125,7 +127,7 @@ text-shadow: -3px 3px 16px #671802;
 }
 .target-section a{
   color: var(--yellow-link);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 600;
 
 }
