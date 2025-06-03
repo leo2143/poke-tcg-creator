@@ -118,7 +118,7 @@ padding: 2rem 0 2rem 0;
 background-color: var(--tertiary-color);
 margin: 5rem 0 5rem 0;
 }
-.target-section h1{
+.target-section h1 , h2{
   color: var(--text-bg-dark);
   font-weight:bold ;
 }
@@ -185,8 +185,6 @@ text-shadow: -3px 3px 16px #671802;
   background: var(--tertiary-color);
   bottom: -50;
   z-index: -1;
-  
-
 }
 
 .wave-bottom::before,

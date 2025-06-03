@@ -17,7 +17,7 @@ export default {
         rareza,
         ilustración y valor.
       </p>
-      <img class="mt-32" src="../assets/images/about_0.png" alt="pokemon de carta tcg">
+      <img class="mt-32 img-fluid" src="../assets/images/about_0.png" alt="pokemon de carta tcg">
       <div class="mt-32">
         <RouterLink to="/about">Mas info</RouterLink>
         <img src="../assets/images/arrow_right.svg" alt="flecha">
@@ -35,7 +35,7 @@ export default {
         propia carta Pokémon TCG: elige el tipo, los ataques, el diseño y hasta la imagen que hará de tu carta algo
         verdaderamente legendario
       </p>
-      <img class="mt-32" src="../assets/images/pikachu-card-movile_0.png" alt="pikachu con una carta">
+      <img class="mt-32 img-fluid" src="../assets/images/pikachu-card-movile_0.png" alt="pikachu con una carta">
       <div class="mt-32">
         <RouterLink to="/about">Mas info</RouterLink>
         <img src="../assets/images/arrow_right_yellow.svg" alt="flecha">
