@@ -10,17 +10,7 @@ const router = createRouter({
       name: 'root',
       component: RootView,
     },
-    {
-      path: '/home',
-      name: 'home',
-      component: () => import('../views/HomeView.vue'),
-    },
-        {
-      path: '/about',
-      name: 'about',
 
-      component: () => import('../views/AboutView.vue'),
-    },
     {
       path: '/history',
       name: 'history',
@@ -28,7 +18,7 @@ const router = createRouter({
       component: () => import('../views/History.vue'),
     },
             {
-      path: '/createCard',
+      path: '/create-card',
       name: 'create-card',
 
       component: () => import('../views/CreateCardView.vue'),

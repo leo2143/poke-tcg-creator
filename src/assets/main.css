@@ -1,7 +1,10 @@
 /* Fuentes */
-@import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@700&display=swap'); /* Display */
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap'); /* Headers */
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap'); /* Lectura */
+@import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@700&display=swap');
+/* Display */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap');
+/* Headers */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap');
+/* Lectura */
 
 
 /* Variables */
@@ -10,7 +13,9 @@
   --bg-primary: #2C7ACE;
   --bg-secondary: #FBAA37;
   --tertiary-color: #EB542B;
-  --yellow-link:#FDD538;
+  --yellow-link: #FDD538;
+  --yellow-link-hover: #ccac2d;
+
 
   --text-bg-white: #002D6C;
   --text-bg-dark: #FDF7EA;
@@ -18,7 +23,8 @@
   /* Colores semánticos */
   --color-background: var(--bg-color);
   --color-border: var(--tertiary-color);
-  --color-border-hover: #d3d3d3; /* ← reemplazá si usás una variable real */
+  --color-border-hover: #d3d3d3;
+  /* ← reemplazá si usás una variable real */
   --color-heading: var(--text-bg-white);
   --color-text: var(--text-bg-white);
 
@@ -27,9 +33,11 @@
   --font-heading: 'Jaldi', sans-serif;
   --font-base: 'Lexend';
 
-  
+
 }
-p,a{
+
+p,
+a {
   margin: 0;
   padding: 0;
 }
@@ -53,38 +61,82 @@ body {
 }
 
 /* Ejemplo de uso para encabezados */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   color: var(--color-heading);
-   margin: 0;
+  margin: 0;
   padding: 0;
 }
-a{
+
+a {
   text-decoration: none;
   color: none;
-  font-family:var(--font-base);
+  font-family: var(--font-base);
   font-size: 1.3rem;
   font-weight: bold;
 }
-.text-bg-white{
-    color: #002D6C  !important;
-} 
-.text-bg-dar{
-   color:  #FDF7EA !important; 
-}
-.secondary-text{
-  color: var(--bg-secondary)!important;
+
+.btn-custom {
+  border-radius: 11px;
+  background-color: var(--yellow-link);
+  border: 2px solid var(--tertiary-color);
+  font-weight: bold;
+
+  box-sizing: border-box;
 }
 
-.yellow-text{
-  color: var(--yellow-link)!important;
+
+.btn-custom:hover {
+  background-color: var(--tertiary-color);
+  color: var(--yellow-link);
+  font-weight: bold;
+  transition: all 0.4s;
 }
-.primary-text{
+
+.btn-custom:active {
+  transform: scale(0.98);
+  background-color: var(--bg-secondary);
+  border: 2px solid var(--yellow-link);
+}
+
+
+.text-bg-white {
+  color: #002D6C !important;
+}
+
+.text-bg-dar {
+  color: #FDF7EA !important;
+}
+
+.secondary-text {
+  color: var(--bg-secondary) !important;
+}
+
+.yellow-text {
+  color: var(--yellow-link) !important;
+}
+
+.ora-text {
+  color: var(--tertiary-color) !important;
+}
+
+.primary-text {
   color: var(--bg-primary) !important;
 }
-.bg-ora{
-background-color: var(  --tertiary-color);
+
+.bg-ora {
+  background-color: var(--tertiary-color);
 }
+
+.bg-darkBlue {
+  background-color: #1b1a17;
+}
+
 .full-height {
   height: 100dvh;
 }
@@ -112,20 +164,25 @@ background-color: var(  --tertiary-color);
 .mb-24 {
   margin-bottom: 1.5rem;
 }
-.target-section{
-color: var(--text-bg-dark);
-padding: 2rem 0 2rem 0;
-background-color: var(--tertiary-color);
-margin: 5rem 0 5rem 0;
-}
-.target-section h1 , h2{
+
+.target-section {
   color: var(--text-bg-dark);
-  font-weight:bold ;
+  padding: 2rem 0 2rem 0;
+  background-color: var(--tertiary-color);
+  margin: 5rem 0 5rem 0;
 }
-.target-section p{
-text-shadow: -3px 3px 16px #671802;
+
+.target-section h1,
+h2 {
+  color: var(--text-bg-dark);
+  font-weight: bold;
 }
-.target-section a{
+
+.target-section p {
+  text-shadow: -3px 3px 16px #671802;
+}
+
+.target-section a {
   color: var(--yellow-link);
   font-size: 1.3rem;
   font-weight: 600;
@@ -153,7 +210,6 @@ text-shadow: -3px 3px 16px #671802;
   position: absolute;
   border-radius: 100% 50%;
   z-index: -1
-
 }
 
 .wave-top::before {
@@ -163,7 +219,6 @@ text-shadow: -3px 3px 16px #671802;
   right: 0;
   top: 60%;
   z-index: -1
-
 }
 
 .wave-top::after {
@@ -194,26 +249,22 @@ text-shadow: -3px 3px 16px #671802;
   position: absolute;
   border-radius: 100% 50%;
   z-index: -1
-
 }
 
 .wave-bottom::before {
-    width: 60%;
-    height: 110%;
+  width: 60%;
+  height: 110%;
   background-color: var(--bg-color);
   right: 0;
   top: 60%;
   z-index: -1
-
 }
 
 .wave-bottom::after {
-    width: 49%;
-    height: 90%;
+  width: 49%;
+  height: 90%;
   background-color: var(--tertiary-color);
   left: 0;
   top: 40%;
   z-index: -1
 }
-
-
