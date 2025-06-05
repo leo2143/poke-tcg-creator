@@ -16,9 +16,11 @@ export default {
 
 <template>
   <header class="mt-5">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+    <nav class="navbar navbar-expand-lg bg-light fixed-top shadow-sm">
       <div class="container-fluid">
-        <RouterLink class="navbar-brand" to="/#hero">MiApp</RouterLink>
+        <RouterLink class="navbar-brand" to="/#hero">
+          <img src="@/assets/images/pokeball-icon.png" class="img-fluid pokeball-icon" alt="imagen pokeball">
+        </RouterLink>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
           aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -73,23 +75,25 @@ export default {
 </template>
 
 <style scoped>
-@media (max-width: 991.98px) {
-  .full-screen-mobile {
-    position: fixed;
-    top: 56px;
-    left: 0;
-    width: 100%;
-    height: calc(100% - 56px);
-    background-color: #fff;
-    z-index: 1040;
-    padding: 1rem;
-    overflow-y: auto;
-  }
+.navbar {
+  background-color: var(--bg-color) !important;
 }
 
-nav {
-  padding-top: env(safe-area-inset-top);
-  height: calc(56px + env(safe-area-inset-top));
+.nav-link {
 
+  transition: all 0.3s;
+  font-weight: 700;
+}
+
+.nav-link:hover {
+
+  color: var(--tertiary-color);
+
+}
+
+.pokeball-icon:hover {
+
+  transform: rotate(360deg);
+  transition: all 1s;
 }
 </style>

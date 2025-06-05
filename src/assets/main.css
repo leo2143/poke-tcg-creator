@@ -165,6 +165,32 @@ a {
   margin-bottom: 1.5rem;
 }
 
+input,
+select,
+textarea {
+  background-color: #fef1d6 !important;
+  /* fondo beige */
+  border: 2px solid #d9534f !important;
+  /* borde rojo */
+  border-radius: 10px !important;
+  padding: 10px 15px !important;
+  font-family: inherit;
+  outline: none !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #c9302c !important;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  font-family: inherit;
+}
+
 .target-section {
   color: var(--text-bg-dark);
   padding: 2rem 0 2rem 0;

@@ -6,7 +6,7 @@
 
       <div v-if="!isSubmitted">
         <h1 class="text-center mt-48 pt-5">Conviertete en creador, diseñá tu carta única</h1>
-        <pokemon-form @submit-pokemon="handlePokemonCreated" />
+        <pokemon-form :pokemonToEdit="pokemonToEdit" @submit-pokemon="handlePokemonCreated" />
       </div>
 
       <!-- Mostrar la carta si el formulario fue enviado -->
@@ -43,13 +43,33 @@ export default {
   data() {
     return {
       isSubmitted: false,
-      createdPokemon: null
+      createdPokemon: null,
+      pokemonToEdit: null
+
     }
   },
+  mounted() {
+    const id = this.$route.query.id;
+
+    if (id) {
+
+      const stored = JSON.parse(localStorage.getItem('pokemons')) || [];
+      const found = stored.find(p => p.id == id);
+
+
+      console.log(found, "---------------------OK");
+      if (found) {
+        this.pokemonToEdit = found;
+      }
+    }
+  },
+
   methods: {
     handlePokemonCreated(pokemon) {
       this.createdPokemon = pokemon
       this.isSubmitted = true
+      this.pokemonToEdit = null;
+      this.$router.replace({ query: {} });
     },
     reloadPage() {
       this.$router.go(0);
