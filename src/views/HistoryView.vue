@@ -4,12 +4,15 @@
       <h1 class=" text-center">Historial de creaciones</h1>
     </div>
     <div class="row">
-      <div class="col-xl-4 animate__animated animate__flipInY" v-for="(poke, index) in recentPokemons" :key="poke.id">
+      <div class="col-xl-6 col-xxl-4 animate__animated animate__flipInY" v-for="(poke, index) in recentPokemons"
+        :key="poke.id">
         <div class="position-relative">
-          <button class="btn btn-sm btn-danger position-absolute top-0 end-0 z-3 "
-            @click="deletePokemon(index)">X</button>
-          <button class="btn btn-primary position-absolute top-0 start-0 z-3" @click="editPokemon(poke)">Editar</button>
-          <pokemon-card :pokemon="poke" />
+          <div
+            class="position-absolute top-0 end-0 start-0 z-3  d-flex gap-2 justify-content-center align-items-center">
+            <button class="btn btn-sm btn-danger " @click="deletePokemon(index)">X</button>
+            <button class="btn btn-custom " @click="editPokemon(poke)">Editar</button>
+          </div>
+          <pokemon-card :pokemon="poke" class="d-block p-xl-5 ms-xl-5" />
         </div>
       </div>
 
@@ -23,7 +26,7 @@
 import PokemonCard from '@/components/pokemonCard.vue'
 
 export default {
-  name: 'History',
+  name: 'HistoryView',
   components: {
     PokemonCard
   },

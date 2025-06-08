@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import RootView from '../views/RootView.vue'
 
-
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -15,9 +14,9 @@ const router = createRouter({
       path: '/history',
       name: 'history',
 
-      component: () => import('../views/History.vue'),
+      component: () => import('../views/HistoryView.vue'),
     },
-            {
+    {
       path: '/create-card',
       name: 'create-card',
 

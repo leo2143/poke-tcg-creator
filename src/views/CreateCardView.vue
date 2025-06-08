@@ -56,8 +56,6 @@ export default {
       const stored = JSON.parse(localStorage.getItem('pokemons')) || [];
       const found = stored.find(p => p.id == id);
 
-
-      console.log(found, "---------------------OK");
       if (found) {
         this.pokemonToEdit = found;
       }
