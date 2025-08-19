@@ -1,35 +1,296 @@
-@import './base.css';
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@700&display=swap');
+/* Display */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap');
+/* Headers */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap');
+/* Lectura */
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+
+/* Variables */
+:root {
+  --bg-color: #FDF7EA;
+  --bg-primary: #2C7ACE;
+  --bg-secondary: #FBAA37;
+  --tertiary-color: #EB542B;
+  --yellow-link: #FDD538;
+  --yellow-link-hover: #ccac2d;
+
+
+  --text-bg-white: #002D6C;
+  --text-bg-dark: #FDF7EA;
+
+  /* Colores semánticos */
+  --color-background: var(--bg-color);
+  --color-border: var(--tertiary-color);
+  --color-border-hover: #d3d3d3;
+  /* ← reemplazá si usás una variable real */
+  --color-heading: var(--text-bg-white);
+  --color-text: var(--text-bg-white);
+
+  /* Tipografía */
+  --font-display: 'Fredoka', sans-serif;
+  --font-heading: 'Jaldi', sans-serif;
+  --font-base: 'Lexend';
+
+
 }
 
-a,
-.green {
+p,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos globales */
+body {
+  font-weight: 500;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-family: var(--font-base);
+  font-size: 1rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+
+}
+
+/* Ejemplo de uso para encabezados */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--color-heading);
+  margin: 0;
+  padding: 0;
+}
+
+a {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+  color: none;
+  font-family: var(--font-base);
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+.btn-custom {
+  border-radius: 11px;
+  background-color: var(--yellow-link);
+  border: 2px solid var(--tertiary-color);
+  font-weight: bold;
+
+  box-sizing: border-box;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+.btn-custom:hover {
+  background-color: var(--tertiary-color);
+  color: var(--yellow-link);
+  font-weight: bold;
+  transition: all 0.4s;
+}
+
+.btn-custom:active {
+  transform: scale(0.98);
+  background-color: var(--bg-secondary);
+  border: 2px solid var(--yellow-link);
+}
+
+
+.text-bg-white {
+  color: #002D6C !important;
+}
+
+.text-bg-dar {
+  color: #FDF7EA !important;
+}
+
+.secondary-text {
+  color: var(--bg-secondary) !important;
+}
+
+.yellow-text {
+  color: var(--yellow-link) !important;
+}
+
+.ora-text {
+  color: var(--tertiary-color) !important;
+}
+
+.primary-text {
+  color: var(--bg-primary) !important;
+}
+
+.bg-ora {
+  background-color: var(--tertiary-color);
+}
+
+.bg-darkBlue {
+  background-color: #1b1a17;
+}
+
+.full-height {
+  height: 100dvh;
+}
+
+.mt-48 {
+  margin-top: 3rem;
+}
+
+.mb-48 {
+  margin-bottom: 3rem;
+}
+
+.mt-32 {
+  margin-top: 2rem;
+}
+
+.mb-32 {
+  margin-bottom: 2rem;
+}
+
+.mt-24 {
+  margin-top: 1.5rem;
+}
+
+.mb-24 {
+  margin-bottom: 1.5rem;
+}
+
+input,
+select,
+textarea {
+  background-color: #fef1d6 !important;
+  /* fondo beige */
+  border: 2px solid #d9534f !important;
+  /* borde rojo */
+  border-radius: 10px !important;
+  padding: 10px 15px !important;
+  font-family: inherit;
+  outline: none !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #c9302c !important;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  font-family: inherit;
+}
+
+.target-section {
+  color: var(--text-bg-dark);
+  padding: 2rem 0 2rem 0;
+  background-color: var(--tertiary-color);
+  margin: 5rem 0 5rem 0;
+}
+
+.target-section h1,
+h2 {
+  color: var(--text-bg-dark);
+  font-weight: bold;
+}
+
+.target-section p {
+  text-shadow: -3px 3px 16px #671802;
+}
+
+.target-section a {
+  color: var(--yellow-link);
+  font-size: 1.3rem;
+  font-weight: 600;
+
+}
+
+
+
+.wave-top {
+  position: absolute;
+  height: 111px;
+  width: 100%;
+  background: var(--tertiary-color);
+  top: -50px;
+  z-index: -1;
+  transform: rotate(180deg);
+
+
+}
+
+.wave-top::before,
+.wave-top::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  z-index: -1
+}
+
+.wave-top::before {
+  width: 55%;
+  height: 109%;
+  background-color: var(--bg-color);
+  right: 0;
+  top: 60%;
+  z-index: -1
+}
+
+.wave-top::after {
+  width: 53%;
+  height: 93%;
+  background-color: var(--tertiary-color);
+  left: 0;
+  top: 40%;
+  z-index: -1
+}
+
+
+/* ----------------------- */
+
+.wave-bottom {
+  position: absolute;
+  height: 111px;
+  width: 100%;
+  background: var(--tertiary-color);
+  bottom: -50;
+  z-index: -1;
+}
+
+.wave-bottom::before,
+.wave-bottom::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  z-index: -1
+}
+
+.wave-bottom::before {
+  width: 60%;
+  height: 110%;
+  background-color: var(--bg-color);
+  right: 0;
+  top: 60%;
+  z-index: -1
+}
+
+.wave-bottom::after {
+  width: 49%;
+  height: 90%;
+  background-color: var(--tertiary-color);
+  left: 0;
+  top: 40%;
+  z-index: -1
 }
